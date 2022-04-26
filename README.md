@@ -114,7 +114,7 @@ When the Credible wallet makes a GET to the Issuer endpoint, a JSON is returned 
            "type": "CredentialOffer",
            "credentialPreview": {...},
            "expires" : "2022-09-01T19:29:39Z"
- })
+ }
 
 ```
 
