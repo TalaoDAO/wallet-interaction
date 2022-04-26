@@ -1,4 +1,4 @@
-# Interaction between the wallet and an Issuer / Verifier
+# Interaction between the wallet and Issuers-Verifiers
 
 26th April 2022
 
