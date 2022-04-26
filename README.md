@@ -99,7 +99,7 @@ example : https://talao.co/....?issuer=did:ethr:0xee09654eedaa79429f8d216fa51a12
 
 ## Motivation
 
-For holders wishes to engage with Issuers to acquire credentials, there must exist a mechanism for assessing what inputs are required from an issuer to process a request for credential issuance. A manifest is a common data format for describing the inputs a user must provide to an Issuer and the way the VCs shopuild be presented. This draft has been inpired by the Credential Manfifest specification with a very limited implementations :
+For holders wishes to engage with Issuers to acquire credentials, there must exist a mechanism for assessing what inputs are required from an issuer to process a request for credential issuance. A manifest is a common data format for describing the inputs a user must provide to an Issuer and the way the VCs should be presented. This draft has been inpired by the Credential Manfifest specification with a very limited implementations :
 
 - display output descriptors as labels (name, description) et templates objetcs (label name, description, color,...),
 - input descriptor,
