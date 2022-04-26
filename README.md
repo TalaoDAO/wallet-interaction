@@ -153,8 +153,11 @@ manifest : TODO give an example of an input_descriptor.
 
 ## Wallet implementation
  
-The id attribute is the qame as the one of the request.  
-If there are items other than“ subject_id ”, the actions of the wallet will be:  
+The "id" attribute is the same as the one of the request.  
+
+The “verifiablePresentation” attribute is a list of Verfiable Presentation.  
+
+If there are items other than “subject_id”, the actions of the wallet will be:  
 
 1. ask the user for consent to transfer their personal data (a “consent screen”)
 2. add VPs in the verifiablePresentation (wallet POST request), in our example:
@@ -168,7 +171,6 @@ If there are items other than“ subject_id ”, the actions of the wallet will 
 ```
 
 verifiablePresentation is the self issued VC if it exists or did_auth with nonce if available in the request.It must be bound to the nonce received.  
-
 
 For display descriptors : "name" and "description" fallback will ne used if any attribute "name" or "description" exists in the VC. There is no internationalization support for those attributes. See "icon" and "color" values in examples. 
 
