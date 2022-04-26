@@ -12,7 +12,7 @@ This protocol occurs when a user wishes to use his wallet to collect credentials
 
 In the following document we will noted the options added by Talao as "Talao build".
 
-## Collecting a Verifiable Credential (Credible build)
+## Collecting a Verifiable Credential (Spruce Credible build)
 
 When the user wants to collect VCs, it is very likely that he will access this service after a first authentication. This wallet protocol does not automatically integrate this first authentication. The user must either authenticate with a pre-existing means of authentication (login/password, openID Connect flow, ...) or possibly use a VC already collected to introduce himself. This process will be used for most of the VCs to be collected such as the identity card, a professional certificate, an electronic bank card, a membership card,…. However, there are special cases where the sender collects information in an anonymous session just before issuing a VC. This is the case of a proof of email, a proof of phone, .... 
  
@@ -49,7 +49,7 @@ chosen DID.*
 ![issuer2.png](issuer2.png)
 
 
-## Requesting a Verifiable Presentation (Credible build)
+## Requesting a Verifiable Presentation (Spruce Credible build)
 
 The presentation of a VC or without any VC can be used for authentication or to request very specific and different services as submit a file, open a bank account, buy online ...
 
@@ -107,7 +107,7 @@ For holders wishes to engage with Issuers to acquire credentials, there must exi
 - challenge to sign a VP.
 
 ## Issuer implementation
-Currently (Credible 0.1) when the wallet makes a GET to the Issuer endpoint, a JSON is returned to the wallet (Issuer GET response):
+When the Credible wallet makes a GET to the Issuer endpoint, a JSON is returned to the wallet (Issuer GET response):
 
 ```javascript
 {
@@ -118,9 +118,9 @@ Currently (Credible 0.1) when the wallet makes a GET to the Issuer endpoint, a J
 
 ```
 
-The modification consists in adding a "display" attribute and a shareLInk attribute to the JSON returned by the Issuer (Issuer GET response).
+The modification consists in adding optional attributes to the JSON returned by the Issuer (Issuer GET response).
  
-The "id" attribute will be used to follow a wallet session with a static QRcode (optional)  
+The "id" attribute will be used to follow a wallet session with a static QRcode 
 The "shareLink" attribute is an UR to be presented for share link as user convenience.  
 The "display" attribute is a description of the Issuer expectations about the UI design of the VC. 
 The challenge and domain arttributes will be used for DID_auth response or self-issued.  
@@ -153,7 +153,7 @@ manifest : TODO give an example of an input_descriptor.
 
 ## Wallet implementation
  
-The id attribute is the qame as the one of teh request.  
+The id attribute is the qame as the one of the request.  
 If there are items other than“ subject_id ”, the actions of the wallet will be:  
 
 1. ask the user for consent to transfer their personal data (a “consent screen”)
