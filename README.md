@@ -120,9 +120,9 @@ When the Credible wallet makes a GET to the Issuer endpoint, a JSON is returned 
 
 The modification consists in adding optional attributes to the JSON returned by the Issuer (Issuer GET response).
  
-The "id" attribute will be used to follow a wallet session with a static QRcode 
-The "shareLink" attribute is an UR to be presented for share link as user convenience.  
-The "display" attribute is a description of the Issuer expectations about the UI design of the VC. 
+The "id" attribute will be used to follow a wallet session with a static QRcode  
+The "shareLink" attribute is an UR to be presented for share link as user convenience.   
+The "display" attribute is a description of the Issuer expectations about the UI design of the VC.  
 The challenge and domain arttributes will be used for DID_auth response or self-issued.  
 Manifest attribute will be used later for the credential manifest json file.  
 
