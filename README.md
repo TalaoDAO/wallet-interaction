@@ -11,7 +11,9 @@
   - [Issuer and verifier implementation](#Issuer-and-verifier-implementation)
 * [Credential offer protocol](#credential-offer-protocol)
 * [Presentation request query types](#presentation-request-query-types) 
-* [Presentation request QueryByExample](#presentation-request-QueryByExample]
+* [Presentation request QueryByExample](#presentation-request-QueryByExample)
+
+
 
 # Overview
 
