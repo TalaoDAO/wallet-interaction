@@ -8,7 +8,7 @@
   - [Collecting a Verifiable Credential](#collecting-a-verifiable-credential)
   - [Requesting a verifiable presentation](#requesting-a-verifiable-presentation)
   - [Issuer and verifier registry](#issuer-and-verifier-registry) 
-* [credentialOffer protocol](#credentialOffer-protocol)
+* [Credential offer protocol](#credential-offer-protocol)
 
 # Overview
 
@@ -109,7 +109,7 @@ The Issuer (or Verifier) DID is passed as an argument in the QRcode callback URL
 example : https://talao.co/....?issuer=did:ethr:0xee09654eedaa79429f8d216fa51a129db0f72250).
 
 
-# credentialOffer protocol
+# Credential Offer protocol
 
 Talao build  
 
