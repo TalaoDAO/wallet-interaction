@@ -2,11 +2,13 @@
 
 26th April 2022
 
-## Menu
+## Documenttation
 
 * [Context](#context)
 * [Collecting a Verifiable Credential](#collecting-a-verifiable-credential)
-* [Requesting a verfifiable presentation](#requesting-a-verifiable-presentation)
+* [Requesting a verifiable presentation](#requesting-a-verifiable-presentation)
+* [Issuer and verifier registry](#issuer-and-verifier-registry) 
+* [credentialOffer protocol](#credentialOffer-protocol)
 
 ## Context
 
@@ -94,7 +96,9 @@ verifiable presentation.*
 
 ![verifier_cross_device.png](verifier_cross_device.png)
 
-## Verification of an issuer or verifier identity (Talao build)
+## Issuer and verifier registry 
+
+Talao build  
 
 ### Motivation
 The protocol of interaction between the wallet and an Issuer or a Verifier currently used by Credible is light, simple and quick to implement, However it does not allow the user of the wallet to ensure the identity of the other party but only the domain name specified in the URL encoded in the QR Code. On the other hand, a simple solution based on access to a public register of Issuers / Verifier makes it possible to obtain more information for the user and therefore better control without considerably increasing the complexity of the protocol. However hhis service must be considered as optional due to correlation issues.
@@ -105,7 +109,9 @@ The Issuer (or Verifier) DID is passed as an argument in the QRcode callback URL
 example : https://talao.co/....?issuer=did:ethr:0xee09654eedaa79429f8d216fa51a129db0f72250).
 
 
-# credentialOffer protocol (Talao build)
+# credentialOffer protocol
+
+Talao build  
 
 ## Motivation
 
