@@ -8,7 +8,10 @@
   - [Collecting a Verifiable Credential](#collecting-a-verifiable-credential)
   - [Requesting a verifiable presentation](#requesting-a-verifiable-presentation)
   - [Issuer and verifier registry](#issuer-and-verifier-registry) 
+  - [Issuer and verifier implementation](#Issuer-and-verifier-implementation)
 * [Credential offer protocol](#credential-offer-protocol)
+* [Presentation request query types](#presentation-request-query-types) 
+* [Presentation request QueryByExample](#presentation-request-QueryByExample]
 
 # Overview
 
@@ -103,13 +106,13 @@ Talao build
 ### Motivation
 The protocol of interaction between the wallet and an Issuer or a Verifier currently used by Credible is light, simple and quick to implement, However it does not allow the user of the wallet to ensure the identity of the other party but only the domain name specified in the URL encoded in the QR Code. On the other hand, a simple solution based on access to a public register of Issuers / Verifier makes it possible to obtain more information for the user and therefore better control without considerably increasing the complexity of the protocol. However hhis service must be considered as optional due to correlation issues.
 
-### Issuer / Verifier implementation
+### Issuer and verifier implementation
 The Issuer (or Verifier) DID is passed as an argument in the QRcode callback URL.
 
 example : https://talao.co/....?issuer=did:ethr:0xee09654eedaa79429f8d216fa51a129db0f72250).
 
 
-# Credential Offer protocol
+# Credential offer protocol
 
 Talao build  
 
@@ -192,7 +195,9 @@ For display descriptors : "name" and "description" fallback will ne used if any 
 
 See https://talao.co/wallet/test/credentialOffer for testing.
 
-# presentationRequest Query types (Talao build)
+# Presentation request query types 
+
+Talao build
 
 ## Motivation
 
@@ -256,7 +261,7 @@ If Query.type = “DIDAuth” , then it is a basic authentication request that d
 
 If Query.type ="QueryByExample "then it will take the user selects credentials in a list constituted according to the criteria specified in "credentialQuery.example". Then it will be necessary to call the didkit.issuePresentation (...) function as what is currently done (there is no change in the function call). Refer to https://w3c-ccg.github.io/vp-request-spec/#query-by-example for more information.
     
-# presentationRequest QueryByExample
+# Presentation request QueryByExample
     
 ## Wallet implementation
 
