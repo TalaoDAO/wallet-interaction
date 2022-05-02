@@ -5,7 +5,8 @@
 ## Menu
 
 * [Context](#context)
-* [Collecting a Verfiable Credential](#)
+* [Collecting a Verifiable Credential](#collecting-a-verifiable-credential)
+* [Requesting a verfifiable presentation](#requesting-a-verifiable-presentation)
 
 ## Context
 
@@ -17,7 +18,9 @@ This protocol occurs when a user wishes to use his wallet to collect credentials
 
 In the following document we will noted the options added by Talao as "Talao build".
 
-## Collecting a Verifiable Credential (Spruce Credible build)
+## Collecting a verifiable credential 
+
+Spruce Credible build  
 
 When the user wants to collect VCs, it is very likely that he will access this service after a first authentication. This wallet protocol does not automatically integrate this first authentication. The user must either authenticate with a pre-existing means of authentication (login/password, openID Connect flow, ...) or possibly use a VC already collected to introduce himself. This process will be used for most of the VCs to be collected such as the identity card, a professional certificate, an electronic bank card, a membership card,…. However, there are special cases where the sender collects information in an anonymous session just before issuing a VC. This is the case of a proof of email, a proof of phone, .... 
  
@@ -54,7 +57,9 @@ chosen DID.*
 ![issuer2.png](issuer2.png)
 
 
-## Requesting a Verifiable Presentation (Spruce Credible build)
+## Requesting a verifiable presentation
+
+ Spruce Credible build  
 
 The presentation of a VC or without any VC can be used for authentication or to request very specific and different services as submit a file, open a bank account, buy online ...
 
