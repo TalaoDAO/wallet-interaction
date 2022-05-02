@@ -2,15 +2,15 @@
 
 26th April 2022
 
-## Documenttation
-
-* [Context](#context)
-* [Collecting a Verifiable Credential](#collecting-a-verifiable-credential)
-* [Requesting a verifiable presentation](#requesting-a-verifiable-presentation)
-* [Issuer and verifier registry](#issuer-and-verifier-registry) 
+## Documentation
+  
+* [Overview](#overview)
+  - [Collecting a Verifiable Credential](#collecting-a-verifiable-credential)
+  - [Requesting a verifiable presentation](#requesting-a-verifiable-presentation)
+  - [Issuer and verifier registry](#issuer-and-verifier-registry) 
 * [credentialOffer protocol](#credentialOffer-protocol)
 
-## Context
+# Overview
 
 For the interaction of the wallet with Issuers and Verifier, which is a decisive function in the implementation of this type of solution, we have retained the specifications of the W3C Presentation Request as well as the Spruce protocol for the management of the QR Code on a HTTPS transport layer. This protocol has the advantage of being quick and easy to implement while providing most of the necessary functions. There are currently several very promising protocols that are being defined or even in production but these seemed to us too complex and ultimately unnecessary for the current use cases which remain simple.
 
