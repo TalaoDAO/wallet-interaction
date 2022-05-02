@@ -12,6 +12,7 @@
 * [Credential offer protocol](#credential-offer-protocol)
 * [Presentation request query types](#presentation-request-query-types) 
 * [Presentation request QueryByExample](#presentation-request-QueryByExample)
+* [Servers return codes](#Servers-return-codes)
 
 
 
@@ -418,7 +419,7 @@ Verifier attaches messages for user but no credential criters :
 
 See https://talao.co/wallet/test/presentationRequest for simulation and testing.
 
-## Servers return codes
+# Servers return codes
    
  ### 200 OK
  Color : Green  
