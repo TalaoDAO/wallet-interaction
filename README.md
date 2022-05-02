@@ -2,7 +2,7 @@
 
 2nd May 2022
 
-## Documentation
+# Documentation
   
 * [Overview](#overview)
   - [Collecting a Verifiable Credential](#collecting-a-verifiable-credential)
