@@ -1,6 +1,6 @@
 # Interaction between the wallet and Issuers-Verifiers
 
-26th April 2022
+2nd May 2022
 
 ## Documentation
   
