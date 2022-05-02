@@ -10,6 +10,8 @@
   - [Issuer and verifier registry](#issuer-and-verifier-registry) 
   - [Issuer and verifier implementation](#Issuer-and-verifier-implementation)
 * [Credential offer protocol](#credential-offer-protocol)
+  - [issuer-implementation](#issuer-implementtaion)
+  - [wallet-implementtaion](#wallet-implementtaion)
 * [Presentation request QueryTypes](#presentation-request-query-types) 
 * [Presentation request QueryByExample](#presentation-request-QueryByExample)
 * [Servers return codes](#Servers-return-codes)
