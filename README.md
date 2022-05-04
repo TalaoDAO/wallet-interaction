@@ -173,7 +173,7 @@ example:
 }
 ```
 
-For cerdentila manifest see https://identity.foundation/credential-manifest/ for more information.  
+For credential manifest see https://identity.foundation/credential-manifest/ for more information.  
 
 ## Wallet implementation
  
