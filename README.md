@@ -168,13 +168,12 @@ example:
             "challenge" : "mjh45RT56",
             "domain" : "talao.co",
             "shareLInk" : "https://talao.co/credential/link?issuer=did:tz:tz1e5YakmACgZZprF7YWHMqnSvcWVXZ2TsPW&id=urnn:idnn:4564:...",
-            "manifest" : "{....}"
+            "manifest" : {.. credential manifest....}
                        
 }
 ```
 
-manifest : TODO give an example of an input_descriptor.  
-
+For cerdentila manifest see https://identity.foundation/credential-manifest/ for more information.  
 
 ## Wallet implementation
  
