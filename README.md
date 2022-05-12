@@ -1,6 +1,6 @@
 # Interaction between the wallet and Issuers-Verifiers
 
-Updatesd : 12 May 2022
+Updatesd : 12 May 2022  
 Author : Thierry Thevenet, thierry.thevenet@talao.io
 
 # Documentation
