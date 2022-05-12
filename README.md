@@ -1,6 +1,6 @@
 # Interaction between the wallet and Issuers-Verifiers
 
-2nd May 2022
+12 May 2022
 
 # Documentation
   
@@ -168,7 +168,7 @@ example:
             "challenge" : "mjh45RT56",
             "domain" : "talao.co",
             "shareLInk" : "https://talao.co/credential/link?issuer=did:tz:tz1e5YakmACgZZprF7YWHMqnSvcWVXZ2TsPW&id=urnn:idnn:4564:...",
-            "manifest" : {.. credential manifest....}
+            "credential_manifest" : {.. credential manifest....}
                        
 }
 ```
