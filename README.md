@@ -12,6 +12,7 @@
 * [Credential offer protocol](#credential-offer-protocol)
   - [issuer implementation](#issuer-implementation)
   - [wallet implementation](#wallet-implementation)
+  - [credential manifest](#credential-manifest)  
 * [Presentation request QueryTypes](#presentation-request-query-types) 
 * [Presentation request QueryByExample](#presentation-request-QueryByExample)
 * [Servers return codes](#Servers-return-codes)
