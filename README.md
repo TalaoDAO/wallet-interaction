@@ -169,6 +169,19 @@ example:
                        
 }
 ```
+The wallet response will be :
+
+```javascript
+{
+           "id" : "uuid:urn....",
+           “Subject_id”, ”did: tz: tz1e5YakmACgZZprF7YWHMqnSvcWVXZ2TsPW”,
+            “verifiablePresentation”: [{...}]
+}
+```
+
+verifiablePresentation is a self issued VC/VP bound with nonce if available in the request. This VP includes all the existing profile attributes if wallet holder consents.  
+
+
 ### Credential manifest
 
 For credential manifest see https://identity.foundation/credential-manifest/ for more information.  
