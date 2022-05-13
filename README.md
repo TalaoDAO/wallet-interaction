@@ -1,6 +1,6 @@
 # Interaction between the wallet and Issuers-Verifiers
 
-Updatesd : 12 May 2022  
+Updatesd : 13th May 2022  
 Author : Thierry Thevenet, thierry.thevenet@talao.io
 
 # Documentation
@@ -12,7 +12,6 @@ Author : Thierry Thevenet, thierry.thevenet@talao.io
   - [Issuer and verifier implementation](#Issuer-and-verifier-implementation)
 * [Credential offer protocol](#credential-offer-protocol)
   - [Issuer implementation](#issuer-implementation)
-  - [Wallet implementation](#wallet-implementation)
   - [Credential manifest](#credential-manifest)  
 * [Presentation request QueryTypes](#presentation-request-query-types) 
 * [Presentation request QueryByExample](#presentation-request-QueryByExample)
@@ -148,12 +147,11 @@ When the Credible wallet makes a GET to the Issuer endpoint, a JSON is returned 
 The modification consists in adding optional attributes to the JSON returned by the Issuer (Issuer GET response).
  
 The "id" attribute will be used to follow a wallet session with a static QRcode  
-The "shareLink" attribute is an UR to be presented for share link as user convenience.   
-The "display" attribute is a description of the Issuer expectations about the UI design of the VC.  
-The challenge and domain arttributes will be used for DID_auth response or self-issued.  
-Manifest attribute will be used later for the credential manifest json file.  
+The "shareLink" attribute is an UR to be presented for share link as user convenience.    
+The "challenge" and domain arttributes will be used for DID_auth response or self-issued.  
+The "credential_manifest" attribute is used to define the expected display options of the VC in the wallet (outpout_descriptors).  
 
-Display, challenge, sharlink and manfiest are optional attributes. Manifest input descriptors will request the challenge attribute.  
+Challenge, id, sharlink and credential manifiest are optional attributes.  
 
 example:
 
@@ -163,13 +161,9 @@ example:
            "type": "CredentialOffer",
            "credentialPreview": {...},
            "expires" : 2022-09-01T19:29:39Z",
-           "display" : { "backgroundColor : "#efefef",
-                        "nameFallback" : "By default this is the name of the VC",
-                        "descriptionFallback" : "By default this is the description of the VC."
-                        },
             "challenge" : "mjh45RT56",
             "domain" : "talao.co",
-            "shareLInk" : "https://talao.co/credential/link?issuer=did:tz:tz1e5YakmACgZZprF7YWHMqnSvcWVXZ2TsPW&id=urnn:idnn:4564:...",
+            "shareLink" : "https://talao.co/credential/link?issuer=did:tz:tz1e5YakmACgZZprF7YWHMqnSvcWVXZ2TsPW&id=urnn:idnn:4564:...",
             "credential_manifest" : {.. credential manifest....}
                        
 }
@@ -264,31 +258,6 @@ an example here :
             }
 ```
 
-## Wallet implementation
- 
-The "id" attribute is the same as the one of the request.  
-
-The “verifiablePresentation” attribute is a list of Verfiable Presentation.  
-
-If there are items other than “subject_id”, the actions of the wallet will be:  
-
-1. ask the user for consent to transfer their personal data (a “consent screen”)
-2. add VPs in the verifiablePresentation (wallet POST request), in our example:
-
-```javascript
-{
-           "id" : "uuid:urn....",
-           “Subject_id”, ”did: tz: tz1e5YakmACgZZprF7YWHMqnSvcWVXZ2TsPW”,
-            “verifiablePresentation”: [{...}]
-}
-```
-
-verifiablePresentation is the self issued VC if it exists or did_auth with nonce if available in the request.It must be bound to the nonce received.  
-
-For display descriptors : "name" and "description" fallback will ne used if any attribute "name" or "description" exists in the VC. There is no internationalization support for those attributes. See "icon" and "color" values in examples. 
-
-See https://talao.co/wallet/test/credentialOffer for testing.
-
 # Presentation request query types 
 
 Talao build
@@ -330,8 +299,6 @@ or:
  }
 ```
 
-## Wallet implementation
-
 ### DIDAuth
 
 If Query.type = “DIDAuth” , then it is a basic authentication request that does not include a verifiable credential : there is no selection of credential to propose to the user, call the function didkit.DIDAuth(did, “{“ challenge ”:“ .... ”,“ domain ”:“ ..... ”}”, key) which will create an empty presentation used only for authentication. The presentation passed with the POST request will look like this:
@@ -357,7 +324,7 @@ If Query.type ="QueryByExample "then it will take the user selects credentials i
     
 # Presentation request QueryByExample
     
-## Wallet implementation
+## Overview
 
 If "credentialQuery": is an empty list, one keeps the current behavior of Credible. The user is asked to select credentials to send. Never mind the VCs.
 
