@@ -14,6 +14,7 @@ Author : Thierry Thevenet, thierry.thevenet@talao.io
   - [Issuer implementation](#issuer-implementation)
   - [Credential manifest](#credential-manifest)  
 * [Presentation request QueryTypes](#presentation-request-query-types) 
+* [Presentation request DIDAuth](#DIDAuth) 
 * [Presentation request QueryByExample](#presentation-request-QueryByExample)
 * [Servers return codes](#Servers-return-codes)
 * [Universal link](#universal-link)
