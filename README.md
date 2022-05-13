@@ -175,7 +175,7 @@ The wallet response will be :
 {
            "id" : "uuid:urn....",
            “Subject_id”, ”did: tz: tz1e5YakmACgZZprF7YWHMqnSvcWVXZ2TsPW”,
-            “verifiablePresentation”: [{...}]
+            “verifiable_presentation”: {.verfiable presentation as self issued VC..}
 }
 ```
 
