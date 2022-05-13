@@ -14,8 +14,8 @@ Author : Thierry Thevenet, thierry.thevenet@talao.io
   - [Issuer implementation](#issuer-implementation)
   - [Credential manifest](#credential-manifest)  
 * [Presentation request QueryTypes](#presentation-request-query-types) 
-* [Presentation request DIDAuth](#DIDAuth) 
-* [Presentation request QueryByExample](#presentation-request-QueryByExample)
+  - [Presentation request DIDAuth](#DIDAuth) 
+  - [Presentation request QueryByExample](#presentation-request-QueryByExample)
 * [Servers return codes](#Servers-return-codes)
 * [Universal link](#universal-link)
 
@@ -300,7 +300,7 @@ or:
  }
 ```
 
-# DIDAuth
+## DIDAuth
 
 If Query.type = “DIDAuth” , then it is a basic authentication request that does not include a verifiable credential : there is no selection of credential to propose to the user, call the function didkit.DIDAuth(did, “{“ challenge ”:“ .... ”,“ domain ”:“ ..... ”}”, key) which will create an empty presentation used only for authentication. The presentation passed with the POST request will look like this:
 
@@ -323,9 +323,9 @@ If Query.type = “DIDAuth” , then it is a basic authentication request that d
 
 If Query.type ="QueryByExample "then it will take the user selects credentials in a list constituted according to the criteria specified in "credentialQuery.example". Then it will be necessary to call the didkit.issuePresentation (...) function as what is currently done (there is no change in the function call). Refer to https://w3c-ccg.github.io/vp-request-spec/#query-by-example for more information.
     
-# Presentation request QueryByExample
+## Presentation request QueryByExample
     
-## Overview
+### Overview
 
 If "credentialQuery": is an empty list, one keeps the current behavior of Credible. The user is asked to select credentials to send. Never mind the VCs.
 
@@ -343,9 +343,9 @@ Nota Bene :
 - By default the credential is required ("required" : "True"), it does not support the other option.
 - The reason attribute should be analysed as an array of different languages ("fr", "en", ...) 
 
-### QBE Examples
+#### QBE Examples
 
-#### Example 1
+##### Example 1
 Verifier requests VCs issued by did:tz:tz2NQkPq3FFA3zGAyG8kLcWatGbeXpHMu7yk:
 
 ```javascript
@@ -373,7 +373,7 @@ Verifier requests VCs issued by did:tz:tz2NQkPq3FFA3zGAyG8kLcWatGbeXpHMu7yk:
 ```
 
 
-#### Example 2
+##### Example 2
 Verifier requests a ResidentCard:
 
 ```javascript
@@ -396,7 +396,7 @@ Verifier requests a ResidentCard:
 }
 ```
 
-#### Example 3
+##### Example 3
 Verifier requests a ResidentCard and a DriverLicense and attaches messages for user :
 
 ```javascript
@@ -445,7 +445,7 @@ Verifier requests a ResidentCard and a DriverLicense and attaches messages for u
 
 ```
 
-#### Example 4
+##### Example 4
 Verifier attaches messages for user but no credential criters :
 
 ```javascript
