@@ -15,7 +15,7 @@ Author : Thierry Thevenet, thierry.thevenet@talao.io
   - [Credential manifest](#credential-manifest)  
 * [Presentation request QueryTypes](#presentation-request-query-types) 
   - [Presentation request DIDAuth](#DIDAuth) 
-  - [Presentation request QueryByExample](#presentation-request-QueryByExample)
+  - [Presentation request QueryByExample](#QueryByExample)
 * [Servers return codes](#Servers-return-codes)
 * [Universal link](#universal-link)
 
@@ -323,7 +323,7 @@ If Query.type = “DIDAuth” , then it is a basic authentication request that d
 
 If Query.type ="QueryByExample "then it will take the user selects credentials in a list constituted according to the criteria specified in "credentialQuery.example". Then it will be necessary to call the didkit.issuePresentation (...) function as what is currently done (there is no change in the function call). Refer to https://w3c-ccg.github.io/vp-request-spec/#query-by-example for more information.
     
-## Presentation request QueryByExample
+## QueryByExample
     
 ### Overview
 
