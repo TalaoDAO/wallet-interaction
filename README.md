@@ -33,7 +33,7 @@ In the following document we will noted the options added by Talao as "Talao bui
 
 ## Collecting a verifiable credential 
 
-Wallet <-> Issuer(server)  : A Verifiafiable credential is issued by an issuer and stored by the wallet.    
+**Wallet <-> Issuer(server)  : A Verifiable Credential (VC) is issued by an issuer and stored by the wallet.**    
 
 Spruce Credible build  
 
@@ -74,7 +74,7 @@ chosen DID.*
 
 ## Requesting a verifiable presentation
 
-wallet <-> verifier(server) : A Verfiable Presentation is presented to teh Verfieir by the wallet. A Vefiable Presentation is a Verfiable Credentuial signed by the wallet (Holder).  
+**Wallet <-> Verifier(server) : A Verifiable Presentation (VP) is presented to the verifier by the wallet. A Verifiable Presentation is a Verfiable Credentuial signed by the wallet(Holder).**  
 
  Spruce Credible build  
 
