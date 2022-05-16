@@ -74,7 +74,7 @@ chosen DID.*
 
 ## Requesting a verifiable presentation
 
-**Wallet <-> Verifier(server) : A Verifiable Presentation (VP) is presented to the verifier by the wallet. A Verifiable Presentation is a Verfiable Credentuial signed by the wallet(Holder).**  
+**Wallet <-> Verifier(server) : A Verifiable Presentation (VP) is presented to the verifier by the wallet. A Verifiable Presentation is a Verfiable Credential signed by the wallet(Holder).**  
 
  Spruce Credible build  
 
