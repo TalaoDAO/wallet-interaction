@@ -33,6 +33,8 @@ In the following document we will noted the options added by Talao as "Talao bui
 
 ## Collecting a verifiable credential 
 
+Wallet <-> Issuer(server)  : A Verifiafiable credential is issued by an issuer and stored by the wallet.    
+
 Spruce Credible build  
 
 When the user wants to collect VCs, it is very likely that he will access this service after a first authentication. This wallet protocol does not automatically integrate this first authentication. The user must either authenticate with a pre-existing means of authentication (login/password, openID Connect flow, ...) or possibly use a VC already collected to introduce himself. This process will be used for most of the VCs to be collected such as the identity card, a professional certificate, an electronic bank card, a membership card,…. However, there are special cases where the sender collects information in an anonymous session just before issuing a VC. This is the case of a proof of email, a proof of phone, .... 
@@ -71,6 +73,8 @@ chosen DID.*
 
 
 ## Requesting a verifiable presentation
+
+wallet <-> verifier(server) : A Verfiable Presentation is presented to teh Verfieir by the wallet. A Vefiable Presentation is a Verfiable Credentuial signed by the wallet (Holder).  
 
  Spruce Credible build  
 
