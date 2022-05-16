@@ -31,6 +31,12 @@ This protocol occurs when a user wishes to use his wallet to collect credentials
 
 In the following document we will noted the options added by Talao as "Talao build".
 
+
+**Basics** :
+
+A Verifiable Credential (VC) is a JSON file which is signed by an issuer according to the standards of the W3C (Verifiable Credentials documents).  
+A Verifiable Presentation (VP) is a JSON file which includes a Verifiable Credential and which is signed by the wallet.  
+
 ## Collecting a verifiable credential 
 
 **Wallet <-> Issuer(server)  : A Verifiable Credential (VC) is issued by an issuer and stored by the wallet.**    
