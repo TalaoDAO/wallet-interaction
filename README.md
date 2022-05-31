@@ -136,12 +136,13 @@ Talao build
 
 ## Motivation
 
-For holders wishes to engage with Issuers to acquire credentials, there must exist a mechanism for assessing what inputs are required from an issuer to process a request for credential issuance. A manifest is a common data format for describing the inputs a user must provide to an Issuer and the way the VCs should be presented. This draft has been inpired by the Credential Manfifest specification with a very limited implementations :
+For holders wishes to engage with Issuers to acquire credentials, there must exist a mechanism for assessing what inputs are required from an issuer to process a request for credential issuance. A manifest is a common data format for describing the inputs a user must provide to an Issuer and the way the VCs should be presented. This draft has been inpired by the Credential Manfifest specification  :
 
-- display output descriptors as labels (name, description) et templates objetcs (label name, description, color,...),
-- input descriptor,
+- output descriptors as labels (name, description) et templates objetcs (label name, description, color,...),
+- input descriptor to request specific data for issuance,
 - share link : a way to use the wallet to link to a cloud service (vault, etc),
-- challenge to sign a VP.
+- challenge and domain name to sign a VP,
+- state (id) to follow the process.
 
 ## Issuer implementation
 When the Credible wallet makes a GET to the Issuer endpoint, a JSON is returned to the wallet (Issuer GET response):
