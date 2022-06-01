@@ -351,6 +351,8 @@ If Query.type ="QueryByExample "then it will take the user selects credentials i
     
 ### Overview
 
+This is a limited implementation of the Verifiable Presentation Request W3C draft.  
+
 If "credentialQuery": is an empty list, one keeps the current behavior of Credible. The user is asked to select credentials to send. Never mind the VCs.
 
 If "credentialQuery.example" contains {"reason": [......]}
@@ -359,8 +361,8 @@ then the Verifier wishes to display an information message to the user. This mes
 If "credentialQuery.example" contains {"type": "some_type"}
 then the Verifier wishes to receive VCs conforming to the specified type and the wallet presents a list of VCs consisting only of the specified type.
 
-If "credentialQueryexample" contains { "trustedIssuer" : ["un_issuer", “un_autre_issuer”, ...]}
-then the Verifier wishes to receive VCs sent by the specified Issuers and the wallet presents a list consisting only of the specified issuers.
+If "credentialQueryexample" contains { "trustedIssuer" : [ {"issuer" : "did:tz2:12343243223"}]}
+then the Verifier wishes to receive VCs sent by the specified Issuer and the wallet presents a list consisting only of the specified issuer.
 
 Nota Bene : 
 - There is one credentialQuery.example for each type of VC requested
