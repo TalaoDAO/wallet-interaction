@@ -421,7 +421,7 @@ Verifier requests a ResidentCard:
 ```
 
 ##### Example 3
-Verifier requests a ResidentCard and a DriverLicense and attaches messages for user :
+Verifier requests a ResidentCard signed by a specific issuer :
 
 ```javascript
 {
@@ -431,33 +431,13 @@ Verifier requests a ResidentCard and a DriverLicense and attaches messages for u
             "type": "QueryByExample",
             "credentialQuery": [
                 {
-                    "reason": [
-                        {
-                            "@language": "en",
-                            "@value": "Join a resident card"
-                        },
-                        {
-                            "@language": "fr",
-                            "@value": "Joindre une carte de résidence"
-                        }
-                    ],
                     "example" : {
-                        "type" : "ResidentCard"
-                    }
-                },
-                {
-                    "reason": [
-                        {
-                            "@language": "en",
-                            "@value": "Join a driver license"
-                        },
-                        {
-                            "@language": "fr",
-                            "@value": "Joindre un permis de conduire"
-                        }
-                    ],
-                    "example" : {
-                        "type" : "DriverLicense"
+                        "type" : "ResidentCard",
+                         "trustedIssuer": [
+                            {
+                                "issuer" : "did:tz:tz2NQkPq3FFA3zGAyG8kLcWatGbeXpHMu7yk"
+                            }
+                        ]
                     }
                 }
             ]
@@ -466,7 +446,6 @@ Verifier requests a ResidentCard and a DriverLicense and attaches messages for u
     "challenge": "9d0927c1-08cb-11ec-a6fa-8d5c53eaebfb",
     "domain": "talao.co"
 }
-
 ```
 
 ##### Example 4
