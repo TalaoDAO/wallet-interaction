@@ -186,18 +186,20 @@ The wallet response will be :
 {
            "id" : "uuid:urn....",
            “Subject_id”, ”did: tz: tz1e5YakmACgZZprF7YWHMqnSvcWVXZ2TsPW”,
-            “presentation”: [{.verfiable presentation as self issued VC..}]
+            “presentation”: [{....verifiable presentation...}]
 }
 ```
 
 verifiablePresentation is a self issued VC/VP bound with nonce if available in the request. This VP includes all the existing profile attributes if wallet holder consents.  
+
+NB : If there is no "credential_manifest" attribute the DID_Auth VP is sent back to the issuer as a proof of ownership of the wallet DID.  
 
 
 ### Credential manifest
 
 For credential manifest see https://identity.foundation/credential-manifest/ for more information.  
 
-an example here :  
+an example here with output descriptors :  
 
 
 ```javascript
@@ -282,6 +284,41 @@ an example here :
               "presentation_definition":{}
             }
 ```
+
+
+an example here with only input descriptors (EmailPass required to issue a credential) :  
+
+
+```javascript
+
+{
+  "credential_manifest": {
+    "presentation_definition": {
+      "id": "32f54163-7166-48f1-93d8-ff217bdb0653",
+      "input_descriptors": [
+        {
+          "id": "emailPass_input_1",
+          "constraints": {
+            "fields": [
+              {
+                "path": [
+                  "$.type"
+                ],
+                "filter": {
+                  "type": "string",
+                  "pattern": "EmailPass"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
+
+```
+
 
 # Presentation request query types 
 
