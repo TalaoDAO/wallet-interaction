@@ -290,7 +290,7 @@ An example here with output descriptors :
 
 #### Input descriptors
 
-Examples here with only input descriptors (EmailPass required to issue a credential) :  
+>An example here with only input descriptors (EmailPass required to issue a credential) :  
 
 
 ```javascript
