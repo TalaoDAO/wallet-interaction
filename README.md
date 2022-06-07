@@ -198,9 +198,11 @@ NB : If there is no "credential_manifest" attribute the DID_Auth VP is sent back
 
 ### Credential manifest
 
-For credential manifest see https://identity.foundation/credential-manifest/ for more information.  
+For credential manifest see https://identity.foundation/credential-manifest/ for more information. "...Credential Manifests are a resource format that defines preconditional requirements, Issuer style preferences, and other facets User Agents utilize to help articulate and select the inputs necessary for processing and issuance of a specified credential"  ( DIF document). 
 
-an example here with output descriptors :  
+#### Output descriptors
+
+An example here with output descriptors :  
 
 
 ```javascript
@@ -286,8 +288,9 @@ an example here with output descriptors :
             }
 ```
 
+#### Input descriptors
 
-an example here with only input descriptors (EmailPass required to issue a credential) :  
+Examples here with only input descriptors (EmailPass required to issue a credential) :  
 
 
 ```javascript
