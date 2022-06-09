@@ -187,7 +187,7 @@ The wallet response will be :
 {
            "id" : "uuid:urn....",
            “Subject_id”, ”did: tz: tz1e5YakmACgZZprF7YWHMqnSvcWVXZ2TsPW”,
-            “presentation”: {....verifiable presentation...}
+            “presentation”: '{....verifiable presentation...}'
 }
 ```
 
