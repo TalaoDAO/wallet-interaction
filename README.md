@@ -1,6 +1,6 @@
 # Interaction between the wallet and Issuers-Verifiers
 
-Updatesd : 7 June 2022  
+Updatesd : 9 June 2022  
 App build > 68  
 Author : Thierry Thevenet, thierry.thevenet@talao.io  
 
@@ -187,7 +187,7 @@ The wallet response will be :
 {
            "id" : "uuid:urn....",
            “Subject_id”, ”did: tz: tz1e5YakmACgZZprF7YWHMqnSvcWVXZ2TsPW”,
-            “presentation”: [{....verifiable presentation...}]
+            “presentation”: {....verifiable presentation...}
 }
 ```
 
