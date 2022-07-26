@@ -77,6 +77,8 @@ For holders wishes to engage with Issuers to acquire credentials, there must exi
 ## Issuer implementation
 When the wallet makes a GET to the Issuer endpoint, a JSON is returned to the wallet (Issuer GET response):
 
+example:  
+
 ```javascript
 {
            "type": "CredentialOffer",
@@ -95,8 +97,6 @@ The "challenge" and domain arttributes will be used for DID_auth response or ver
 The "credential_manifest" attribute is used to define the expected display options of the VC in the wallet (outpout_descriptors).  
 
 Challenge, domain, and sharlink are optional attributes.  
-
-example:
 
 The wallet response will be :
 
