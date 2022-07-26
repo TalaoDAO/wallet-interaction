@@ -13,7 +13,7 @@ Author : Thierry Thevenet, thierry.thevenet@talao.io
   - [Issuer and verifier implementation](#Issuer-and-verifier-implementation)
 * [Credential offer protocol](#credential-offer-protocol)
   - [Issuer implementation](#issuer-implementation)
-  - [Credential manifest](#credential-manifest)  
+  - [Credential manifest and wallet rendering](#credential-manifest-and-wallet-rendering)  
 * [Presentation request QueryTypes](#presentation-request-query-types) 
   - [Presentation request DIDAuth](#DIDAuth) 
   - [Presentation request QueryByExample](#QueryByExample)
@@ -205,7 +205,15 @@ the credential manifest allows you to display the data you want on the resto of 
 An other approach is to design a specific template for the credential. Contact us if needed.  
 
 
-#### Output descriptors
+#### Output descriptors and wallet rendering
+
+Wallet rendering is defined by this standard https://identity.foundation/wallet-rendering/
+
+In the AltMe wallet card details, the Title of the card and subtitle of the card are attributes from the output_descriptors.display. The accordion "Description" is teh description attribute of teh same output_descriptors.diplay.  
+The "Informations" accordion is made up of all properties of the output_descriptors.properties.
+
+![Example](https://github.com/TalaoDAO/wallet-interaction/blob/main/Cards%20details%20_%20status%20active.png)  
+
 
 An example here with output descriptors :  
 
