@@ -1,6 +1,6 @@
 # Interaction between the wallet and Issuers-Verifiers
 
-Updatesd : 9 June 2022  
+Updated : 26 July 2022  
 App build > 68  
 Author : Thierry Thevenet, thierry.thevenet@talao.io  
 
@@ -42,39 +42,7 @@ A Verifiable Presentation (VP) is a JSON file which includes a Verifiable Creden
 
 **Wallet <-> Issuer(server)  : A Verifiable Credential (VC) is issued by an issuer and stored by the wallet.**    
 
-Spruce Credible build  
 
-When the user wants to collect VCs, it is very likely that he will access this service after a first authentication. This wallet protocol does not automatically integrate this first authentication. The user must either authenticate with a pre-existing means of authentication (login/password, openID Connect flow, ...) or possibly use a VC already collected to introduce himself. This process will be used for most of the VCs to be collected such as the identity card, a professional certificate, an electronic bank card, a membership card,…. However, there are special cases where the sender collects information in an anonymous session just before issuing a VC. This is the case of a proof of email, a proof of phone, .... 
- 
-This VCs collection protocol called Credential Offer is as follows: the issuer displays a QR code (or sends an email with a deep link) which indicates a service URL to which its own DID is added. The wallet requests authorization to the user to access the URL possibly by retrieving information about the issuer from a trusted registry. 
-
-If the user agrees, the issuer transfers a “preview” of the VC with presentation data (color, name, description, etc.) as well as an expiry date of the offer. If the user accepts the proposal, the wallet transfers the DID to the issuer who signs the VC and transfers it to the wallet. 
-
-This protocol is carried by a GET request and a POST request on the URL indicated in the QRCode.
-
-It has been described by Spruce (see below  an extract of the Spruce [README.md]( https://github.com/spruceid/credible#credentialoffer ) ) :
-
-
-
-| Wallet                   | <sup>1</sup> |       |                      Server |
-| ------------------------ | ------------ | :---: | --------------------------: |
-| Scan QRCode <sup>2</sup> |              |       |
-| Trust Host               | ○ / ×        |       |                             |
-| HTTP GET                 |              |   →   | https://domain.tld/endpoint |
-|                          |              |   ←   |             CredentialOffer |
-| Preview Credential       |              |       |                             |
-| Choose DID               | ○ / ×        |       |                             |
-| HTTP POST <sup>3</sup>   |              |   →   | https://domain.tld/endpoint |
-|                          |              |   ←   |        VerifiableCredential |
-| Verify Credential        |              |       |                             |
-| Store Credential         |              |       |                             |
-
-*<sup>1</sup> Whether this action requires user confirmation, exiting the flow
-early when the user denies.*  
-*<sup>2</sup> The QRCode should contain the HTTP endpoint where the requests
-will be made.*  
-*<sup>3</sup> The body of the request contains a field `subject_id` set to the
-chosen DID.*
 
 ![issuer2.png](issuer2.png)
 
@@ -83,37 +51,6 @@ chosen DID.*
 
 **Wallet <-> Verifier(server) : A Verifiable Presentation (VP) is presented to the verifier by the wallet. A Verifiable Presentation is a Verfiable Credential signed by the wallet(Holder).**  
 
- Spruce Credible build  
-
-The presentation of a VC or without any VC can be used for authentication or to request very specific and different services as submit a file, open a bank account, buy online ...
-
-Authentication without VC consists of transferring an empty but signed VP. It is only possible if the verifier already has knowledge of the user's DID, therefore after prior enrollment. 
-
-Authentication with a VC can be used on the first interaction between the user and the verifier. The verifier will be able to specify his request by giving the type of VC expected, or the desired issuer, JSON-LD scheme,.. etc. The verifier will then proceed to check the signatures of the user and the issuers, possibly using a trusted register.  
-
-This protocol called Presentation Request is as follows: the verifier displays a QR code which indicates a service URL to which its own DID is added. The wallet requests authorization to the user to access the URL possibly by retrieving information about the verifier from a trusted registry. Verifying the identity of the verifier is critical to prevent the user from disclosing personal data to untrusted websites.
-
-If the user agrees, the sender transfers his request specifying the type of VC expected. In the case of authentication by DID, the user can accept and send his empty presentation, in the case of a request from particular VCs, the wallet offers the user to select the VCs he wishes to add to his presentation. The list of VCs offered to the user is produced on the basis of the criteria of the verifier's request.
-
-It has been described by Spruce (see below  an extract of the Spruce [README.md]( https://github.com/spruceid/credible#presentationrequest ) ) :
-
-| Wallet                       | <sup>1</sup> |       |                        Server |
-| ---------------------------- | ------------ | :---: | ----------------------------: |
-| Scan QRCode <sup>2</sup>     |              |       |
-| Trust Host                   | ○ / ×        |       |                               |
-| HTTP GET                     |              |   →   |   https://domain.tld/endpoint |
-|                              |              |   ←   | VerifiablePresentationRequest |
-| Preview Presentation         |              |       |                               |
-| Choose Verifiable Credential | ○ / ×        |       |                               |
-| HTTP POST <sup>3</sup>       |              |   →   |   https://domain.tld/endpoint |
-|                              |              |   ←   |                        Result |
-
-*<sup>1</sup> Whether this action requires user confirmation, exiting the flow
-early when the user denies.*  
-*<sup>2</sup> The QRCode should contain the HTTP endpoint where the requests
-will be made.*  
-*<sup>3</sup> The body of the request contains a field `presentation` set to the
-verifiable presentation.*
 
 
 ![verifier_cross_device.png](verifier_cross_device.png)
