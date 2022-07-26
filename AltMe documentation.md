@@ -115,9 +115,7 @@ verifiable presentation is a credential bound with nonce if available in the req
 
 For credential manifest see https://identity.foundation/credential-manifest/ for more information. "...Credential Manifests are a resource format that defines preconditional requirements, Issuer style preferences, and other facets User Agents utilize to help articulate and select the inputs necessary for processing and issuance of a specified credential"  ( DIF document). 
 
-the credential manifest allows you to display the data you want on the resto of the standard "card" in the wallet. The recto of this card in the list af credential is quite standard as you only have name and description.  
-
-An other approach is to design a specific template for the credential. Contact us if needed.  
+the credential manifest allows you to display the data you want on the standard "card" in the wallet. For specific design an other approach is to design a customized template for the credential. Contact us if needed.   
 
 
 #### Output descriptors and wallet rendering
