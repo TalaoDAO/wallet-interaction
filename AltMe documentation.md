@@ -12,7 +12,7 @@ Author : Thierry Thevenet, thierry.thevenet@talao.io
   - [Issuer and verifier implementation](#Issuer-and-verifier-implementation)
 * [Credential offer protocol](#credential-offer-protocol)
   - [Issuer implementation](#issuer-implementation)
-  - [Credential manifest and wallet rendering](#credential-manifest-and-wallet-rendering)  
+  - [Credential manifest and wallet rendering](#credential-manifest)  
 * [Presentation request QueryTypes](#presentation-request-query-types) 
   - [Presentation request DIDAuth](#DIDAuth) 
   - [Presentation request QueryByExample](#QueryByExample)
