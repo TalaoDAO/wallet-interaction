@@ -76,31 +76,10 @@ For holders wishes to engage with Issuers to acquire credentials, there must exi
 - state (id) to follow the process.
 
 ## Issuer implementation
-When the Credible wallet makes a GET to the Issuer endpoint, a JSON is returned to the wallet (Issuer GET response):
+When the wallet makes a GET to the Issuer endpoint, a JSON is returned to the wallet (Issuer GET response):
 
 ```javascript
 {
-           "type": "CredentialOffer",
-           "credentialPreview": {...},
-           "expires" : "2022-09-01T19:29:39Z"
- }
-
-```
-
-The modification consists in adding optional attributes to the JSON returned by the Issuer (Issuer GET response).
- 
-The "id" attribute will be used to follow a wallet session with a static QRcode  
-The "shareLink" attribute is an UR to be presented for share link as user convenience.    
-The "challenge" and domain arttributes will be used for DID_auth response or self-issued.  
-The "credential_manifest" attribute is used to define the expected display options of the VC in the wallet (outpout_descriptors).  
-
-Challenge, id, sharlink and credential manifiest are optional attributes.  
-
-example:
-
-```javascript
-{
-          "id ": "uuid:urn:...",
            "type": "CredentialOffer",
            "credentialPreview": {...},
            "expires" : 2022-09-01T19:29:39Z",
@@ -111,6 +90,15 @@ example:
                        
 }
 ```
+
+The "shareLink" attribute is an UR to be presented for share link as user convenience.    
+The "challenge" and domain arttributes will be used for DID_auth response or verifible presentation.  
+The "credential_manifest" attribute is used to define the expected display options of the VC in the wallet (outpout_descriptors).  
+
+Challenge, domain, and sharlink are optional attributes.  
+
+example:
+
 The wallet response will be :
 
 ```javascript
@@ -121,9 +109,7 @@ The wallet response will be :
 }
 ```
 
-verifiablePresentation is a self issued VC/VP bound with nonce if available in the request. This VP includes all the existing profile attributes if wallet holder consents.  
-
-NB : If there is no "credential_manifest" attribute the DID_Auth VP is sent back to the issuer as a proof of ownership of the wallet DID.  
+verifiable presentation is a credential bound with nonce if available in the request. This credential includes all the existing profile attributes if wallet holder consents.  
 
 
 ### Credential manifest
@@ -139,11 +125,11 @@ An other approach is to design a specific template for the credential. Contact u
 
 Wallet rendering is defined by this standard https://identity.foundation/wallet-rendering/
 
-In the AltMe wallet card details, the Title of the card and subtitle of the card are attributes from the output_descriptors.display. The accordion "Description" is the description attribute of the same output_descriptors.diplay.  
-The "Informations" accordion is made up of all properties of the output_descriptors.properties.
+In the wallet card details screen the Title of the card and subtitle of the card are attributes from the output_descriptors.display. The accordion "Description" is the description attribute of the same output_descriptors.diplay.  
 
-![Example](https://github.com/TalaoDAO/wallet-interaction/blob/main/Cards%20details%20_%20status%20active.png)  
+The "Informations" accordion is made up of all properties of the output_descriptors.properties.  
 
+![Example of a card details screen ](https://github.com/TalaoDAO/wallet-interaction/blob/main/Cards%20details%20_%20status%20active.png)  
 
 An example here with output descriptors :  
 
