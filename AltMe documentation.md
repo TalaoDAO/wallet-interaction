@@ -111,13 +111,19 @@ The wallet response will be :
 
 verifiable presentation is a credential bound with nonce if available in the request. This credential includes all the existing profile attributes if wallet holder consents.  
 
+### Credential manifest
+
+...(DIF) "For User Agents (e.g. wallets) and other service that wish to engage with Issuers to acquire credentials, there must exist a mechanism for assessing what inputs are required from a Subject to process a request for credential(s) issuance. The Credential Manifest is a common data format for describing the inputs a Subject must provide to an Issuer for subsequent evaluation and issuance of the credential(s) indicated in the Credential Manifest."  
+
+In a credential manifest you can provide output descriptors with wallet rendring metada.   
+ 
 #### Wallet rendering
 
 Wallet rendering is defined by this standard https://identity.foundation/wallet-rendering/
 
 In the wallet card details screen the Title of the card and Subtitle of the card are attributes "title" an "subtitle" from the output_descriptors.display. The accordion "Description" is the description attribute of the same output_descriptors.diplay.  
 
-The "Informations" accordion is made up of all properties of the output_descriptors.properties.  
+The "Informations" accordion of ALtme is made up of all properties of the output_descriptors.properties.  
 
 Altme supports type "string" without format (it means "text") or with format "email", "uri" and type "number", "integer" and "boo". See an example here :
 
