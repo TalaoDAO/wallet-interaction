@@ -15,7 +15,7 @@ Author : Thierry Thevenet, thierry.thevenet@talao.io
   - [Credential manifest](#credential-manifest)  
     - [Output descriptors and wallet rendering](#wallet-rendering)  
     - [Input descriptors](#input-descriptors) 
-* [Presentation request QueryTypes](#presentation-request-query-types) 
+* [Presentation request protocol](#presentation-request-query-types) 
   - [Presentation request DIDAuth](#DIDAuth) 
   - [Presentation request QueryByExample](#QueryByExample)
 * [Servers return codes](#Servers-return-codes)
