@@ -12,7 +12,8 @@ Author : Thierry Thevenet, thierry.thevenet@talao.io
   - [Issuer and verifier implementation](#Issuer-and-verifier-implementation)
 * [Credential offer protocol](#credential-offer-protocol)
   - [Issuer implementation](#issuer-implementation)
-  - [Credential manifest and wallet rendering](#credential-manifest)  
+  - [Credential manifest](#credential-manifest)  
+  - [Wallet rendering](#wallet-redenring)  
 * [Presentation request QueryTypes](#presentation-request-query-types) 
   - [Presentation request DIDAuth](#DIDAuth) 
   - [Presentation request QueryByExample](#QueryByExample)
@@ -110,21 +111,91 @@ The wallet response will be :
 
 verifiable presentation is a credential bound with nonce if available in the request. This credential includes all the existing profile attributes if wallet holder consents.  
 
-
-### Credential manifest
-
-For credential manifest see https://identity.foundation/credential-manifest/ for more information. "...Credential Manifests are a resource format that defines preconditional requirements, Issuer style preferences, and other facets User Agents utilize to help articulate and select the inputs necessary for processing and issuance of a specified credential"  ( DIF document). 
-
-the credential manifest allows you to display the data you want on the standard "card" in the wallet. For specific design an other approach is to design a customized template for the credential. Contact us if needed.   
-
-
-#### Output descriptors and wallet rendering
+####Wallet rendering
 
 Wallet rendering is defined by this standard https://identity.foundation/wallet-rendering/
 
-In the wallet card details screen the Title of the card and subtitle of the card are attributes from the output_descriptors.display. The accordion "Description" is the description attribute of the same output_descriptors.diplay.  
+In the wallet card details screen the Title of the card and Subtitle of the card are attributes "title" an "subtitle" from the output_descriptors.display. The accordion "Description" is the description attribute of the same output_descriptors.diplay.  
 
 The "Informations" accordion is made up of all properties of the output_descriptors.properties.  
+
+Altme supports type "string" without format (it means "text") or with format "email", "uri" and type "number", "integer" and "boo". See an example here :
+
+
+```javascript
+  "output_descriptors":[                       
+                        {
+                          "id": "00000000",
+                          "schema": "Test",
+                          "display": {
+                            "title": {
+                                "path": [],
+                                "schema": {
+                                  "type": "string"
+                                },
+                                "fallback": "VC for Test"
+                              },
+                              "subtitle": {
+                                "path": [],
+                                "schema": {
+                                  "type": "string"
+                                },
+                                "fallback": "Type and format"
+                              },
+                            "description": {
+                              "path": [],
+                              "schema": {
+                                "type": "string"
+                              },
+                              "fallback": "This VC is made up for testing prupose."
+                            },
+                            "properties": [
+                              {
+                                "path": ["$.credentialSubject.integer"],
+                                "schema": {
+                                  "type": "integer"
+                                },
+                                "fallback": "Unknown",
+                                "label": "integer"
+                              },
+                              {
+                                "path": ["$.credentialSubject.number"],
+                                "schema": {
+                                  "type": "number"
+                                },
+                                "fallback": "Unknown",
+                                "label": "number"
+                              },
+                              {
+                                "path": ["$.credentialSubject.bool"],
+                                "schema": {
+                                  "type": "bool"
+                                },
+                                "fallback": "Unknown",
+                                "label": "bool"
+                              },
+                              {
+                                "path": ["$.credentialSubject.uri"],
+                                "schema": {
+                                  "type": "text",
+                                  "format" : "uri"
+                                },
+                                "fallback": "Unknown",
+                                "label": "uri"
+                              },
+                              {
+                                "path": ["$.credentialSubject.email"],
+                                "schema": {
+                                  "type": "text",
+                                  "format" : "email"
+                                },
+                                "fallback": "Unknown",
+                                "label": "email"
+                              }
+
+                            ]
+```
+
 
 ![Example of a card details screen ](https://github.com/TalaoDAO/wallet-interaction/blob/main/Cards%20details%20_%20status%20active.png)  
 
