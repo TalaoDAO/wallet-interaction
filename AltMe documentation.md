@@ -3,6 +3,8 @@
 Updated : 9th of August 2022  
 Author : Thierry Thevenet, thierry.thevenet@talao.io  
 
+!(https://github.com/TalaoDAO/wallet-interaction/blob/main/Image%20d%E2%80%99iOS.png)
+
 # Documentation
   
 * [Overview](#overview)
