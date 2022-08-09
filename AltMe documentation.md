@@ -14,6 +14,7 @@ Author : Thierry Thevenet, thierry.thevenet@talao.io
   - [Issuer implementation](#issuer-implementation)
   - [Credential manifest](#credential-manifest)  
   - [Wallet rendering](#wallet-rendering)  
+  - [Input descriptors](#input-descriptors) 
 * [Presentation request QueryTypes](#presentation-request-query-types) 
   - [Presentation request DIDAuth](#DIDAuth) 
   - [Presentation request QueryByExample](#QueryByExample)
