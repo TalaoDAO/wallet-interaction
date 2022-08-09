@@ -126,7 +126,7 @@ In the wallet card details screen the Title of the card and Subtitle of the card
 
 The "Informations" accordion of Altme is made up of all properties of the output_descriptors.properties.  
 
-Altme supports type "string" without format (it means "text") or with format "email", "uri", "date", hour" and type "number", "integer" and "bool". See an example here :   
+Altme supports type "string" with specific format "email", "uri", "date", hour" and other types as "number", "integer" and "bool". See an example here :   
 
 
 ```javascript
