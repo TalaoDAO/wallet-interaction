@@ -294,6 +294,7 @@ An example here with output descriptors :
 
 #### Input descriptors
 
+Input descriptors are used to specify the data or credentials needed to issue a credential. It is a main feature of DIF Presentation Exchange. See https://identity.foundation/presentation-exchange/#presentation-definition for more information.      
 An example here with only input descriptors (EmailPass required to issue a credential) :  
 
 
