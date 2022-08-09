@@ -120,13 +120,13 @@ In a credential manifest you can provide output descriptors with wallet rendring
  
 #### Wallet rendering
 
-Wallet rendering is defined by this standard https://identity.foundation/wallet-rendering/
+Wallet rendering is defined by this standard https://identity.foundation/wallet-rendering/   
 
 In the wallet card details screen the Title of the card and Subtitle of the card are attributes "title" an "subtitle" from the output_descriptors.display. The accordion "Description" is the description attribute of the same output_descriptors.diplay.  
 
-The "Informations" accordion of ALtme is made up of all properties of the output_descriptors.properties.  
+The "Informations" accordion of Altme is made up of all properties of the output_descriptors.properties.  
 
-Altme supports type "string" without format (it means "text") or with format "email", "uri" and type "number", "integer" and "boo". See an example here :
+Altme supports type "string" without format (it means "text") or with format "email", "uri", "date", hour" and type "number", "integer" and "bool". See an example here :   
 
 
 ```javascript
