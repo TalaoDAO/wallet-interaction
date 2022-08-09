@@ -111,7 +111,7 @@ The wallet response will be :
 
 verifiable presentation is a credential bound with nonce if available in the request. This credential includes all the existing profile attributes if wallet holder consents.  
 
-####Wallet rendering
+#### Wallet rendering
 
 Wallet rendering is defined by this standard https://identity.foundation/wallet-rendering/
 
