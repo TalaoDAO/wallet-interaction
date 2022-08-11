@@ -1,4 +1,4 @@
-# Interaction between the wallet and Issuers-Verifiers
+# Altme wallet : Interaction between the wallet and Issuers-Verifiers
 
 Updated : 9th of August 2022  
 Author : Thierry Thevenet, thierry.thevenet@talao.io  
