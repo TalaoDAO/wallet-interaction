@@ -1,6 +1,7 @@
 # Interaction between the wallet and Issuers-Verifiers
 
-For Altme wallet see : 
+## Nota
+For Altme wallet see : https://github.com/TalaoDAO/wallet-interaction/blob/main/AltMe%20documentation.md
 
 Updatesd : 9 June 2022  
 App build > 68  
