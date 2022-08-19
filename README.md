@@ -192,7 +192,7 @@ or if there are several verifiable presentations
 
 ```javascript
            “Subject_id”, ”did:tz:tz1e5YakmACgZZprF7YWHMqnSvcWVXZ2TsPW”,
-           “presentation”: "[ "{....verifiable presentation...}", "{.....verifiable presenttaion...}" ]"
+           “presentation”: "[ "{....verifiable presentation 1...}", "{.....verifiable presentation 2...}" ]"
 ```
 
 
