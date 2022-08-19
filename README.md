@@ -162,37 +162,39 @@ When the Credible wallet makes a GET to the Issuer endpoint, a JSON is returned 
 
 The modification consists in adding optional attributes to the JSON returned by the Issuer (Issuer GET response).
  
-The "id" attribute will be used to follow a wallet session with a static QRcode  
-The "shareLink" attribute is an UR to be presented for share link as user convenience.    
 The "challenge" and domain arttributes will be used for DID_auth response or self-issued.  
 The "credential_manifest" attribute is used to define the expected display options of the VC in the wallet (outpout_descriptors).  
 
-Challenge, id, sharlink and credential manifiest are optional attributes.  
+Challenge, domain and credential manifiest are optional attributes.  
 
 example:
 
 ```javascript
 {
-          "id ": "uuid:urn:...",
            "type": "CredentialOffer",
            "credentialPreview": {...},
            "expires" : 2022-09-01T19:29:39Z",
             "challenge" : "mjh45RT56",
             "domain" : "talao.co",
-            "shareLink" : "https://talao.co/credential/link?issuer=did:tz:tz1e5YakmACgZZprF7YWHMqnSvcWVXZ2TsPW&id=urnn:idnn:4564:...",
             "credential_manifest" : {.. credential manifest....}
                        
 }
 ```
-The wallet response will be :
+The wallet response will be application/x-www-form-urlencoded :
 
 ```javascript
-{
-           "id" : "uuid:urn....",
-           “Subject_id”, ”did: tz: tz1e5YakmACgZZprF7YWHMqnSvcWVXZ2TsPW”,
-            “presentation”: '{....verifiable presentation...}'
-}
+           “Subject_id”, ”did:tz:tz1e5YakmACgZZprF7YWHMqnSvcWVXZ2TsPW”,
+            “presentation”: "{....verifiable presentation...}"
+```  
+
+or if there are several verifiable presentations  
+
+
+```javascript
+           “Subject_id”, ”did:tz:tz1e5YakmACgZZprF7YWHMqnSvcWVXZ2TsPW”,
+           “presentation”: "[ "{....verifiable presentation...}", "{.....verifibale presenttaion...}" ]"
 ```
+
 
 verifiablePresentation is a self issued VC/VP bound with nonce if available in the request. This VP includes all the existing profile attributes if wallet holder consents.  
 
