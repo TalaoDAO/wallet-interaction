@@ -180,7 +180,7 @@ example:
                        
 }
 ```
-The wallet response will be application/x-www-form-urlencoded :
+The wallet will make a POST to the endpoint with data encoded as application/x-www-form-urlencoded :
 
 ```javascript
            “Subject_id”, ”did:tz:tz1e5YakmACgZZprF7YWHMqnSvcWVXZ2TsPW”,
@@ -192,13 +192,13 @@ or if there are several verifiable presentations
 
 ```javascript
            “Subject_id”, ”did:tz:tz1e5YakmACgZZprF7YWHMqnSvcWVXZ2TsPW”,
-           “presentation”: "[ "{....verifiable presentation...}", "{.....verifibale presenttaion...}" ]"
+           “presentation”: "[ "{....verifiable presentation...}", "{.....verifiable presenttaion...}" ]"
 ```
 
 
-verifiablePresentation is a self issued VC/VP bound with nonce if available in the request. This VP includes all the existing profile attributes if wallet holder consents.  
+NB : If there is no credentials requested in the input_descriptors of the credential manifest, a DID_Auth VP is sent back to the issuer as a proof of ownership of the wallet DID.  
 
-NB : If there is no "credential_manifest" attribute the DID_Auth VP is sent back to the issuer as a proof of ownership of the wallet DID.  
+To complete the process the server (as an issuer) returns the signed credential as a JSON.  
 
 
 ### Credential manifest
