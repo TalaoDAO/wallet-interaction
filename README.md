@@ -187,13 +187,6 @@ The wallet will make a POST to the endpoint with data encoded as application/x-w
             “presentation”: "{....verifiable presentation...}"
 ```  
 
-or if there are several verifiable presentations  
-
-
-```javascript
-           “Subject_id”, ”did:tz:tz1e5YakmACgZZprF7YWHMqnSvcWVXZ2TsPW”,
-           “presentation”: "[ "{....verifiable presentation 1...}", "{.....verifiable presentation 2...}" ]"
-```
 
 
 NB : If there is no credentials requested in the input_descriptors of the credential manifest, a DID_Auth VP is sent back to the issuer as a proof of ownership of the wallet DID.  
