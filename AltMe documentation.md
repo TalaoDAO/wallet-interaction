@@ -94,11 +94,11 @@ example:
 }
 ```
 
-The "shareLink" attribute is an UR to be presented for share link as user convenience.    
+
 The "challenge" and domain arttributes will be used for DID_auth response or verifible presentation.  
 The "credential_manifest" attribute is used to define the expected display options of the VC in the wallet (outpout_descriptors).  
 
-Challenge, domain, and sharlink are optional attributes.  
+id, challenge and domain are optional attributes.  
 
 The wallet response will be :
 
@@ -109,6 +109,16 @@ The wallet response will be :
             “presentation”: '{....verifiable presentation...}'
 }
 ```
+
+or if there are several verifiable presentations  
+
+
+```javascript
+           "id" : ""hjhghlkjgljkgjkg",
+           “Subject_id”, ”did:tz:tz1e5YakmACgZZprF7YWHMqnSvcWVXZ2TsPW”,
+           “presentation”: "[ "{....verifiable presentation 1...}", "{.....verifiable presentation 2...}" ]"
+```
+
 
 verifiable presentation is a credential bound with nonce if available in the request. This credential includes all the existing profile attributes if wallet holder consents.  
 
