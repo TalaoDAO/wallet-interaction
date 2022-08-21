@@ -84,11 +84,11 @@ example:
 ```javascript
 {
            "type": "CredentialOffer",
+           "id" : "hjhghlkjgljkgjkg",
            "credentialPreview": {...},
            "expires" : 2022-09-01T19:29:39Z",
             "challenge" : "mjh45RT56",
             "domain" : "talao.co",
-            "shareLink" : "https://talao.co/credential/link?issuer=did:tz:tz1e5YakmACgZZprF7YWHMqnSvcWVXZ2TsPW&id=urnn:idnn:4564:...",
             "credential_manifest" : {.. credential manifest....}
                        
 }
@@ -104,7 +104,7 @@ The wallet response will be :
 
 ```javascript
 {
-           "id" : "uuid:urn....",
+           "id" : ""hjhghlkjgljkgjkg",
            “Subject_id”, ”did: tz: tz1e5YakmACgZZprF7YWHMqnSvcWVXZ2TsPW”,
             “presentation”: '{....verifiable presentation...}'
 }
