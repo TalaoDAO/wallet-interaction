@@ -425,7 +425,6 @@ then the Verifier wishes to receive VCs sent by the specified Issuer and the wal
 Nota Bene : 
 - There is one credentialQuery.example for each type of VC requested
 - By default the credential is required ("required" : "True"), it does not support the other option.
-- The reason attribute should be analysed as an array of different languages ("fr", "en", ...) 
 
 
 The wallet response will be :
