@@ -1,6 +1,6 @@
 # Altme wallet : Interaction between the wallet and Issuers-Verifiers
 
-Updated : 9th of August 2022  
+Updated : 19th of October 2022  
 Author : Thierry Thevenet, thierry.thevenet@talao.io  
 
 # Documentation
