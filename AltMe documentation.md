@@ -427,6 +427,19 @@ Nota Bene :
 - By default the credential is required ("required" : "True"), it does not support the other option.
 - The reason attribute should be analysed as an array of different languages ("fr", "en", ...) 
 
+
+The wallet response will be :
+
+```javascript
+{
+            “presentation”: '{....verifiable presentation...}'
+}
+```
+
+Multiple crdentials will be inside the "verifiableCredential" attribute of the presnetation as example : https://www.w3.org/TR/vc-data-model/#example-a-simple-example-of-a-verifiable-presentation 
+
+
+
 #### QBE Examples
 
 ##### Example 1
